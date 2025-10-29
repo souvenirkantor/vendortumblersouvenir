@@ -1,0 +1,226 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Global Header
+--------------------------------------------------------------*/
+.header {
+  --background-color: rgba(255, 255, 255, 0);
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 15px 0;
+  transition: all 0.5s;
+  z-index: 997;
+
+  .logo {
+    line-height: 1;
+
+    img {
+      max-height: 36px;
+      margin-right: 8px;
+    }
+
+    h1 {
+      font-size: 30px;
+      margin: 0;
+      font-weight: 500;
+      color: var(--heading-color);
+    }
+  }
+
+  .btn-getstarted,
+  .btn-getstarted:focus {
+    color: var(--contrast-color);
+    background: var(--accent-color);
+    font-size: 14px;
+    padding: 8px 26px;
+    margin: 0;
+    border-radius: 4px;
+    transition: 0.3s;
+
+    &:hover {
+      color: var(--contrast-color);
+      background: color-mix(in srgb, var(--accent-color), transparent 15%);
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .logo {
+      order: 1;
+    }
+
+    .btn-getstarted {
+      order: 2;
+      margin: 0 15px 0 0;
+      padding: 6px 20px;
+    }
+
+    .navmenu {
+      order: 3;
+    }
+  }
+
+  .scrolled & {
+    box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Global Header on Scroll
+------------------------------*/
+.scrolled .header {
+  --background-color: #ffffff;
+}
+
+/* Index Page Header
+------------------------------*/
+.index-page .header {
+  --background-color: #ffffff;
+}
+
+/* Index Page Header on Scroll
+------------------------------*/
+.index-page.scrolled .header {
+  --background-color: #ffffff;
+}
+
+/* Layanan Details Page Header
+------------------------------*/
+.layanan-details-page .header {
+  --background-color: #ffffff;
+}
+
+/* Artikel Page Header
+------------------------------*/
+.artikel-page .header {
+  --background-color: #ffffff;
+}
+
+/* Index2 Page Header on Scroll
+------------------------------*/
+.index2-page.scrolled .header {
+  --background-color: #ffffff;
+}
+
+/* Index3 Page Header on Scroll
+------------------------------*/
+.index3-page.scrolled .header {
+  --background-color: #ffffff;
+}
+
+/* Index4 Page Header on Scroll
+------------------------------*/
+.index4-page.scrolled .header {
+  --background-color: #ffffff;
+}
+
+/* Index5 Page Header on Scroll
+------------------------------*/
+.index5-page.scrolled .header {
+  --background-color: #ffffff;
+}
+
+/* Index6 Page Header on Scroll
+------------------------------*/
+.index6-page.scrolled .header {
+  --background-color: #ffffff;
+}
+
+/* Index7 Page Header on Scroll
+------------------------------*/
+.index7-page.scrolled .header {
+  --background-color: #ffffff;
+}
+
+/* Index8 Page Header on Scroll
+------------------------------*/
+.index8-page.scrolled .header {
+  --background-color: #ffffff;
+}
+
+/* Index9 Page Header on Scroll
+------------------------------*/
+.index9-page.scrolled .header {
+  --background-color: #ffffff;
+}
+
+/* Index10 Page Header on Scroll
+------------------------------*/
+.index10-page.scrolled .header {
+  --background-color: #ffffff;
+}
+
+/* Index11 Page Header on Scroll
+------------------------------*/
+.index11-page.scrolled .header {
+  --background-color: #ffffff;
+}
+
+/* Galeri Produk Page Header
+------------------------------*/
+.galeri-produk-page .header {
+  --background-color: #ffffff;
+}
+
+/* Galeri Detail Page Header
+------------------------------*/
+.galeri-detail-page .header {
+  --background-color: #ffffff;
+}
+
+/* Artikel 2 Page Header
+------------------------------*/
+.artikel-2-page .header {
+  --background-color: #ffffff;
+}
+
+/* Artikel 3 Page Header
+------------------------------*/
+.artikel-3-page .header {
+  --background-color: #ffffff;
+}
+
+/* Blog Page Header
+------------------------------*/
+.blog-page .header {
+  --background-color: #ffffff;
+}
+
+/* Artikel 4 Page Header
+------------------------------*/
+.artikel-4-page .header {
+  --background-color: #ffffff;
+}
+
+/* Artikel 5 Page Header
+------------------------------*/
+.artikel-5-page .header {
+  --background-color: #ffffff;
+}
+
+/* Produk Page Header
+------------------------------*/
+.produk-page .header {
+  --background-color: #ffffff;
+}
+
+/* Produk Detail Page Header
+------------------------------*/
+.produk-detail-page .header {
+  --background-color: #ffffff;
+}
+
+/* Index12 Page Header on Scroll
+------------------------------*/
+.index12-page.scrolled .header {
+  --background-color: #ffffff;
+}
+
+/* Tentang Kami Page Header
+------------------------------*/
+.tentang-kami-page .header {
+  --background-color: #ffffff;
+}
+
+/* Produk Detail 2 Page Header
+------------------------------*/
+.produk-detail-2-page .header {
+  --background-color: #ffffff;
+}

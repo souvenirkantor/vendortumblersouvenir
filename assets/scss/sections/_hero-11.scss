@@ -1,0 +1,258 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Hero 11 Section
+--------------------------------------------------------------*/
+.hero-11 {
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(160deg,
+      color-mix(in srgb, var(--accent-color), transparent 90%) 0%,
+      var(--background-color) 50%);
+
+  .content {
+    .subtitle {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--accent-color);
+      margin-bottom: 15px;
+      padding: 5px 15px;
+      background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+      border-radius: 20px;
+    }
+
+    h1 {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      opacity: 0.8;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 40px;
+
+      .btn {
+        padding: 12px 30px;
+        font-weight: 600;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+
+        &.btn-primary {
+          background-color: var(--accent-color);
+          color: var(--contrast-color);
+          border: none;
+
+          i {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+          }
+
+          &:hover {
+            background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+
+            i {
+              transform: translateX(5px);
+            }
+          }
+        }
+
+        &.btn-outline {
+          color: var(--heading-color);
+          background: transparent;
+          border: 2px solid color-mix(in srgb, var(--heading-color), transparent 80%);
+
+          &:hover {
+            background-color: var(--heading-color);
+            border-color: var(--heading-color);
+            color: var(--contrast-color);
+          }
+        }
+      }
+    }
+
+    .stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 40px;
+      padding-top: 40px;
+      border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+
+      .stat-item {
+        h3 {
+          font-size: 36px;
+          font-weight: 700;
+          color: var(--heading-color);
+          margin-bottom: 5px;
+        }
+
+        p {
+          font-size: 14px;
+          margin: 0;
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
+  .image-wrapper {
+    position: relative;
+    padding: 20px;
+
+    .main-image {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  .floating-card {
+    position: absolute;
+    background: var(--surface-color);
+    padding: 15px 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 2;
+
+    &.top {
+      top: 0;
+      right: 0;
+    }
+
+    &.bottom {
+      bottom: 40px;
+      left: 0;
+    }
+
+    i {
+      font-size: 24px;
+      color: var(--accent-color);
+    }
+
+    .text {
+      h4 {
+        font-size: 16px;
+        margin: 0 0 2px 0;
+      }
+
+      p {
+        font-size: 13px;
+        margin: 0;
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .trusted-by {
+    margin-top: 80px;
+    text-align: center;
+
+    p {
+      font-size: 14px;
+      color: var(--heading-color);
+      opacity: 0.7;
+      margin-bottom: 20px;
+    }
+
+    .logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      flex-wrap: wrap;
+
+      img {
+        height: 30px;
+        opacity: 0.6;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    padding: 80px 0;
+
+    .content {
+      text-align: center;
+      margin-bottom: 50px;
+
+      h1 {
+        font-size: 40px;
+      }
+
+      .cta-buttons {
+        justify-content: center;
+      }
+
+      .stats {
+        justify-content: center;
+      }
+    }
+
+    .image-wrapper {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 60px 0;
+
+    .content {
+      h1 {
+        font-size: 32px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+
+        .btn {
+          width: 100%;
+        }
+      }
+
+      .stats {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+      }
+    }
+
+    .floating-card {
+      display: none;
+    }
+
+    .trusted-by {
+      margin-top: 0;
+
+      .logos {
+        gap: 30px;
+
+        img {
+          height: 25px;
+        }
+      }
+    }
+  }
+}

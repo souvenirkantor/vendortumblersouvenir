@@ -1,0 +1,172 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Hero 21 Section
+--------------------------------------------------------------*/
+.hero-21 {
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+
+  // Random shape 1: Circle
+  &::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: color-mix(in srgb, orange, transparent 85%);
+    z-index: 1;
+  }
+
+  // Random shape 2: Triangle
+  .triangle-shape {
+    position: absolute;
+    bottom: 15%;
+    right: 10%;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 86px solid color-mix(in srgb, var(--accent-color), transparent 90%);
+    transform: rotate(15deg);
+    z-index: 1;
+  }
+
+  // Random shape 3: Square
+  .square-shape {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    width: 70px;
+    height: 70px;
+    background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+    transform: rotate(30deg);
+    z-index: 1;
+  }
+
+  // Random shape 4: Wavy line
+  .wavy-line {
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(45deg, transparent 33%, color-mix(in srgb, var(--accent-color), transparent 95%) 33%, color-mix(in srgb, var(--accent-color), transparent 95%) 66%, transparent 66%);
+    background-size: 40px 40px;
+    opacity: 0.5;
+    z-index: 1;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+    color: var(--default-color);
+    margin-bottom: 2rem;
+  }
+
+  .hero-buttons {
+    .btn {
+      padding: 0.75rem 1.5rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+
+      &.btn-primary {
+        background-color: var(--accent-color);
+        border-color: var(--accent-color);
+        color: var(--contrast-color);
+
+        &:hover {
+          background-color: color-mix(in srgb, var(--accent-color), var(--contrast-color) 10%);
+          border-color: color-mix(in srgb, var(--accent-color), var(--contrast-color) 10%);
+        }
+      }
+
+      &.btn-outline-primary {
+        color: var(--accent-color);
+        border-color: var(--accent-color);
+
+        &:hover {
+          background-color: var(--accent-color);
+          color: var(--contrast-color);
+        }
+      }
+
+      .bi {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+
+  .hero-stats {
+    .stats-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent-color);
+      margin-bottom: 0.5rem;
+    }
+
+    .stats-text {
+      font-size: 0.9rem;
+      color: var(--default-color);
+    }
+  }
+
+  .hero-image-wrapper {
+    position: relative;
+
+    .hero-image {
+      border-radius: 10px;
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    .hero-title {
+      font-size: 2rem;
+    }
+
+    .hero-description {
+      font-size: 1rem;
+    }
+
+    .hero-stats {
+      .stats-number {
+        font-size: 1.75rem;
+      }
+    }
+
+    // Adjust shape sizes for smaller screens
+    &::after {
+      width: 60px;
+      height: 60px;
+    }
+
+    .triangle-shape {
+      border-left-width: 30px;
+      border-right-width: 30px;
+      border-bottom-width: 52px;
+    }
+
+    .square-shape {
+      width: 50px;
+      height: 50px;
+    }
+
+    .wavy-line {
+      height: 60px;
+      background-size: 30px 30px;
+    }
+  }
+}

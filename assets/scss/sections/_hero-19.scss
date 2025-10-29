@@ -1,0 +1,64 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Hero 19 Section
+--------------------------------------------------------------*/
+.hero-19 {
+  padding-top: 101px;
+  padding-bottom: 80px;
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+
+    @media (min-width: 992px) {
+      font-size: 3rem;
+    }
+  }
+
+  .lead {
+    font-size: 1.1rem;
+    color: color-mix(in srgb, var(--default-color), transparent 25%);
+  }
+
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+  }
+
+  .client-logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+
+    img {
+      padding: 20px 40px;
+      max-width: 90%;
+      transition: 0.3s;
+      opacity: 0.5;
+      filter: grayscale(100);
+
+      &:hover {
+        filter: none;
+        opacity: 1;
+      }
+
+      @media (max-width: 640px) {
+        padding: 20px;
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    .img-fluid {
+      margin-bottom: 2rem;
+    }
+  }
+}

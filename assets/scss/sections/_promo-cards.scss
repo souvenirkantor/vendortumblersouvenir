@@ -1,0 +1,122 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Promo Cards Section
+--------------------------------------------------------------*/
+.promo-cards {
+  padding-top: 60px;
+  --defaault-color: #555;
+  --heading-color: #333;
+  padding-bottom: 60px;
+
+  .promo-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    height: 100%;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    &.men-card {
+      background-color: #e6f4fa; // Light blue background
+    }
+
+    &.women-card {
+      background-color: #faf5e6; // Light beige/yellow background
+    }
+
+    .product-image {
+      margin: 0;
+      padding: 15px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        max-height: 250px;
+        object-fit: contain;
+      }
+    }
+
+    .promo-content {
+      padding: 20px 15px 20px 0;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: center;
+    }
+
+    .discount-badge {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: var(--accent-color);
+      letter-spacing: 0.5px;
+    }
+
+    .product-title {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      line-height: 1.2;
+      color: var(--heading-color);
+
+      @media (max-width: 991px) {
+        font-size: 1.5rem;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 1.25rem;
+      }
+    }
+
+    .shop-btn {
+      display: inline-block;
+      background-color: var(--accent-color);
+      color: var(--contrast-color);
+      font-weight: 600;
+      padding: 8px 20px;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      align-self: flex-start;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+
+      &:hover {
+        background-color: color-mix(in srgb, var(--accent-color) 90%, black 15%);
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  // Responsive adjustments
+  @media (max-width: 767px) {
+    .promo-card {
+      .row {
+        flex-direction: column;
+      }
+
+      .col-5,
+      .col-7 {
+        width: 100%;
+      }
+
+      .product-image {
+        padding: 15px 15px 0;
+      }
+
+      .promo-content {
+        padding: 15px 20px 20px;
+        text-align: center;
+
+        .shop-btn {
+          align-self: center;
+        }
+      }
+    }
+  }
+}

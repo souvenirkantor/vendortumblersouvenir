@@ -1,0 +1,219 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Call To Action 16 Section
+--------------------------------------------------------------*/
+.call-to-action-16 {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 95%) 0%, color-mix(in srgb, var(--heading-color), transparent 95%) 100%);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../img/construction/showcase-4.webp");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.1;
+    z-index: 1;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .cta-wrapper {
+    background: var(--surface-color);
+    border-radius: 15px;
+    padding: 60px;
+    box-shadow: 0 20px 60px color-mix(in srgb, var(--default-color), transparent 85%);
+    border: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
+
+    @media (max-width: 768px) {
+      padding: 40px 30px;
+    }
+  }
+
+  .cta-content {
+    h2 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: var(--heading-color);
+      line-height: 1.2;
+
+      @media (max-width: 768px) {
+        font-size: 2.2rem;
+      }
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+      color: color-mix(in srgb, var(--default-color), transparent 20%);
+    }
+  }
+
+  .cta-stats {
+    .stat-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 20px;
+      background: color-mix(in srgb, var(--accent-color), transparent 95%);
+      border-radius: 10px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: color-mix(in srgb, var(--accent-color), transparent 90%);
+        transform: translateY(-2px);
+      }
+
+      i {
+        font-size: 2rem;
+        color: var(--accent-color);
+        flex-shrink: 0;
+      }
+
+      .stat-content {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+
+        .stat-number {
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: var(--heading-color);
+          line-height: 1;
+        }
+
+        .stat-label {
+          font-size: 0.9rem;
+          color: color-mix(in srgb, var(--default-color), transparent 30%);
+        }
+      }
+    }
+
+    @media (max-width: 576px) {
+      .row {
+        flex-direction: column;
+      }
+
+      .stat-item {
+        text-align: center;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  }
+
+  .cta-actions {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+
+    .action-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 15px 30px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border-radius: 8px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        transition: all 0.3s ease;
+        text-decoration: none;
+
+        i {
+          font-size: 1.2rem;
+        }
+
+        &.btn-primary {
+          background: var(--accent-color);
+          color: var(--contrast-color);
+          border: 2px solid var(--accent-color);
+
+          &:hover {
+            background: color-mix(in srgb, var(--accent-color), black 15%);
+            border-color: color-mix(in srgb, var(--accent-color), black 15%);
+            transform: translateY(-2px);
+          }
+        }
+
+        &.btn-outline {
+          background: transparent;
+          color: var(--heading-color);
+          border: 2px solid var(--heading-color);
+
+          &:hover {
+            background: transparent;
+            transform: translateY(-2px);
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+          }
+        }
+      }
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .contact-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 15px;
+        background: color-mix(in srgb, var(--heading-color), transparent 95%);
+        border-radius: 8px;
+        border-left: 4px solid var(--accent-color);
+
+        i {
+          font-size: 1.3rem;
+          color: var(--accent-color);
+          margin-top: 3px;
+          flex-shrink: 0;
+        }
+
+        div {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+
+          strong {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--heading-color);
+          }
+
+          span {
+            font-size: 0.9rem;
+            color: color-mix(in srgb, var(--default-color), transparent 30%);
+            line-height: 1.4;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 992px) {
+      gap: 30px;
+      margin-top: 30px;
+    }
+  }
+}

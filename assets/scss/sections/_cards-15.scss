@@ -1,0 +1,87 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Cards 15 Section
+--------------------------------------------------------------*/
+.cards-15 {
+  .card {
+    background-color: var(--surface-color);
+    color: var(--default-color);
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+    position: relative;
+    border-radius: 0;
+    height: 100%;
+    display: flex;
+    /* Tambahan untuk fleksibilitas layout */
+    flex-direction: column;
+
+    /* Tambahan untuk fleksibilitas layout */
+    .card-img {
+      overflow: hidden;
+      margin-bottom: 15px;
+      border-radius: 0;
+
+      img {
+        transition: 0.3s ease-in-out;
+      }
+    }
+
+    h3 {
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 5px;
+      padding: 10px 30px;
+      text-transform: uppercase;
+    }
+
+    a {
+      color: var(--heading-color);
+      transition: 0.3s;
+
+      &:hover {
+        color: var(--accent-color);
+      }
+    }
+
+    p {
+      padding: 0 30px;
+      margin-bottom: 15px;
+      /* Dimodifikasi dari 30px untuk spasi yang lebih baik */
+      color: color-mix(in srgb, var(--default-color), transparent 40%);
+      font-size: 15px;
+      flex-grow: 1;
+      /* Tambahan agar paragraf mengisi ruang yang tersedia */
+    }
+
+    /* --- KODE BARU DITAMBAHKAN --- */
+    .read-more {
+      padding: 0 30px 30px 30px;
+      /* Padding untuk alignment dan spasi bawah */
+      font-weight: 600;
+      font-size: 15px;
+
+      span {
+        color: var(--accent-color);
+        display: inline-flex;
+        align-items: center;
+      }
+
+      i {
+        margin-left: 8px;
+        font-size: 16px;
+        transition: margin-left 0.3s ease-in-out;
+      }
+    }
+
+    /* --- AKHIR DARI KODE BARU --- */
+    &:hover {
+      .card-img img {
+        transform: scale(1.1);
+      }
+
+      /* --- EFEK HOVER BARU DITAMBAHKAN --- */
+      .read-more i {
+        margin-left: 12px;
+      }
+    }
+  }
+}

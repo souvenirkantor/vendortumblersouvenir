@@ -1,0 +1,257 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Cards 3 Section
+--------------------------------------------------------------*/
+.cards-3 {
+  .feature-card {
+    position: relative;
+    background: var(--surface-color);
+    border-radius: 20px;
+    padding: 32px 28px 28px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 12px color-mix(in srgb, var(--default-color), transparent 92%);
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 95%);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-color), color-mix(in srgb, var(--accent-color), transparent 40%));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 32px color-mix(in srgb, var(--accent-color), transparent 88%);
+      border-color: color-mix(in srgb, var(--accent-color), transparent 80%);
+
+      &::after {
+        transform: scaleX(1);
+      }
+
+      .icon-wrapper {
+        transform: scale(1.1) rotate(-5deg);
+      }
+
+      .card-visual img {
+        transform: scale(1.08);
+      }
+
+      .link-action {
+        background: var(--accent-color);
+        color: var(--contrast-color);
+        padding-right: 24px;
+
+        i {
+          transform: translateX(4px);
+        }
+      }
+    }
+
+    &.highlight {
+      background: linear-gradient(135deg,
+          color-mix(in srgb, var(--accent-color), transparent 96%),
+          var(--surface-color));
+      border-color: var(--accent-color);
+      box-shadow: 0 8px 24px color-mix(in srgb, var(--accent-color), transparent 85%);
+
+      &::after {
+        transform: scaleX(1);
+        height: 4px;
+      }
+
+      .icon-wrapper {
+        background: var(--accent-color);
+        color: var(--contrast-color);
+
+        i {
+          color: var(--contrast-color);
+        }
+      }
+
+      .link-action {
+        background: var(--accent-color);
+        color: var(--contrast-color);
+      }
+    }
+
+    .icon-wrapper {
+      width: 56px;
+      height: 56px;
+      background: color-mix(in srgb, var(--accent-color), transparent 90%);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      transition: all 0.3s ease;
+
+      i {
+        font-size: 28px;
+        color: var(--accent-color);
+      }
+    }
+
+    .badge-popular {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: var(--accent-color);
+      color: var(--contrast-color);
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 12px color-mix(in srgb, var(--accent-color), transparent 70%);
+    }
+
+    .card-content {
+      flex: 0 0 auto;
+      margin-bottom: 24px;
+
+      h3 {
+        font-size: 19px;
+        font-weight: 700;
+        color: var(--heading-color);
+        margin-bottom: 12px;
+        line-height: 1.3;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 1.65;
+        color: color-mix(in srgb, var(--default-color), transparent 25%);
+        margin: 0;
+      }
+    }
+
+    .card-visual {
+      flex: 1;
+      margin-bottom: 24px;
+      border-radius: 12px;
+      overflow: hidden;
+      background: color-mix(in srgb, var(--accent-color), transparent 97%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+
+      img {
+        width: 100%;
+        height: auto;
+        max-height: 140px;
+        object-fit: contain;
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+    }
+
+    .link-action {
+      display: inline-flex;
+      align-items: center;
+      align-self: flex-start;
+      padding: 10px 18px;
+      background: color-mix(in srgb, var(--accent-color), transparent 92%);
+      color: var(--accent-color);
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+
+      span {
+        margin-right: 6px;
+      }
+
+      i {
+        font-size: 16px;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    @media (max-width: 992px) {
+      padding: 28px 24px 24px;
+
+      .icon-wrapper {
+        width: 52px;
+        height: 52px;
+        margin-bottom: 16px;
+
+        i {
+          font-size: 26px;
+        }
+      }
+
+      .card-content {
+        margin-bottom: 20px;
+
+        h3 {
+          font-size: 18px;
+        }
+      }
+
+      .card-visual {
+        margin-bottom: 20px;
+        padding: 12px;
+
+        img {
+          max-height: 120px;
+        }
+      }
+    }
+
+    @media (max-width: 576px) {
+      padding: 24px 20px 20px;
+
+      .badge-popular {
+        top: 12px;
+        right: 12px;
+        padding: 3px 12px;
+        font-size: 11px;
+      }
+
+      .icon-wrapper {
+        width: 48px;
+        height: 48px;
+        border-radius: 14px;
+
+        i {
+          font-size: 24px;
+        }
+      }
+
+      .card-content {
+        h3 {
+          font-size: 17px;
+        }
+
+        p {
+          font-size: 13px;
+        }
+      }
+
+      .card-visual img {
+        max-height: 100px;
+      }
+
+      .link-action {
+        padding: 9px 16px;
+        font-size: 13px;
+      }
+    }
+  }
+}

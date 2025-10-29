@@ -1,0 +1,117 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# About 9 Section
+--------------------------------------------------------------*/
+.about-9 {
+  .about-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+
+    img {
+      transition: transform 0.6s ease;
+
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+
+    @media (max-width: 992px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .about-content {
+    h3 {
+      font-weight: 700;
+      font-size: 28px;
+      margin-bottom: 20px;
+      position: relative;
+
+      @media (max-width: 768px) {
+        font-size: 24px;
+      }
+    }
+
+    p {
+      color: color-mix(in srgb, var(--default-color), transparent 20%);
+      margin-bottom: 15px;
+      line-height: 1.7;
+    }
+  }
+
+  .about-stat {
+    text-align: center;
+
+    h4 {
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--accent-color);
+      margin-bottom: 5px;
+
+      @media (max-width: 768px) {
+        font-size: 28px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      margin-bottom: 0;
+      color: color-mix(in srgb, var(--default-color), transparent 30%);
+    }
+  }
+
+  .about-card {
+    background-color: var(--surface-color);
+    padding: 30px;
+    border-radius: 8px;
+    height: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+
+      .icon-box {
+        background-color: var(--accent-color);
+        color: var(--contrast-color);
+      }
+    }
+
+    h4 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 15px;
+      color: color-mix(in srgb, var(--default-color), transparent 20%);
+      margin-bottom: 0;
+      line-height: 1.6;
+    }
+
+    .icon-box {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+      color: var(--accent-color);
+      font-size: 24px;
+      transition: all 0.3s ease;
+    }
+
+    @media (max-width: 768px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .swiper-wrapper {
+    height: auto !important;
+  }
+}

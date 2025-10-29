@@ -1,0 +1,219 @@
+/*--------------------------------------------------------------
+# Global Sections
+--------------------------------------------------------------*/
+section,
+.section {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 60px 0;
+  scroll-margin-top: 90px;
+  overflow: clip;
+}
+
+@media (max-width: 1199px) {
+
+  section,
+  .section {
+    scroll-margin-top: 66px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Global Section Titles
+--------------------------------------------------------------*/
+.section-title {
+  text-align: center;
+  padding-bottom: 60px;
+  position: relative;
+
+  h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 160px;
+      height: 1px;
+      background: color-mix(in srgb, var(--default-color), transparent 60%);
+      left: 0;
+      right: 0;
+      bottom: 1px;
+      margin: auto;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: var(--accent-color);
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+@import './sections/_hero-22.scss';
+@import './sections/_about.scss';
+@import './sections/_clients.scss';
+@import './sections/_features.scss';
+@import './sections/_features-2.scss';
+@import './sections/_call-to-action.scss';
+@import './sections/_services.scss';
+@import './sections/_gallery-15.scss';
+@import './sections/_testimonials.scss';
+@import './sections/_faq.scss';
+@import './sections/_cards-14.scss';
+@import './sections/_service-details.scss';
+@import './sections/_starter-section.scss';
+@import './sections/_post-details.scss';
+@import './sections/_post-slider.scss';
+@import './sections/_hero-2.scss';
+@import './sections/_hero-3.scss';
+@import './sections/_hero-4.scss';
+@import './sections/_hero-5.scss';
+@import './sections/_hero-6.scss';
+@import './sections/_hero-7.scss';
+@import './sections/_hero-8.scss';
+@import './sections/_hero-9.scss';
+@import './sections/_hero-10.scss';
+@import './sections/_hero-11.scss';
+@import './sections/_hero-12.scss';
+@import './sections/_hero-13.scss';
+@import './sections/_about-2.scss';
+@import './sections/_about-3.scss';
+@import './sections/_about-4.scss';
+@import './sections/_features-3.scss';
+@import './sections/_features-5.scss';
+@import './sections/_features-4.scss';
+@import './sections/_call-to-action-2.scss';
+@import './sections/_call-to-action-3.scss';
+@import './sections/_clients-2.scss';
+@import './sections/_testimonials-2.scss';
+@import './sections/_stats-2.scss';
+@import './sections/_services-2.scss';
+@import './sections/_faq-2.scss';
+@import './sections/_call-to-action-4.scss';
+@import './sections/_hero-15.scss';
+@import './sections/_about-5.scss';
+@import './sections/_features-6.scss';
+@import './sections/_clients-3.scss';
+@import './sections/_cards.scss';
+@import './sections/_gallery.scss';
+@import './sections/_testimonials-3.scss';
+@import './sections/_services-3.scss';
+@import './sections/_gallery-2.scss';
+@import './sections/_faq-3.scss';
+@import './sections/_hero-14.scss';
+@import './sections/_about-6.scss';
+@import './sections/_features-7.scss';
+@import './sections/_gallery-3.scss';
+@import './sections/_cards-2.scss';
+@import './sections/_gallery-4.scss';
+@import './sections/_faq-4.scss';
+@import './sections/_hero-16.scss';
+@import './sections/_about-7.scss';
+@import './sections/_features-8.scss';
+@import './sections/_gallery-5.scss';
+@import './sections/_cards-3.scss';
+@import './sections/_gallery-6.scss';
+@import './sections/_faq-5.scss';
+@import './sections/_hero-17.scss';
+@import './sections/_about-8.scss';
+@import './sections/_features-9.scss';
+@import './sections/_gallery-7.scss';
+@import './sections/_cards-4.scss';
+@import './sections/_gallery-8.scss';
+@import './sections/_call-to-action-6.scss';
+@import './sections/_faq-6.scss';
+@import './sections/_hero-18.scss';
+@import './sections/_about-9.scss';
+@import './sections/_features-10.scss';
+@import './sections/_gallery-9.scss';
+@import './sections/_cards-5.scss';
+@import './sections/_gallery-10.scss';
+@import './sections/_call-to-action-5.scss';
+@import './sections/_faq-7.scss';
+@import './sections/_hero-19.scss';
+@import './sections/_about-10.scss';
+@import './sections/_features-11.scss';
+@import './sections/_call-to-action-7.scss';
+@import './sections/_gallery-12.scss';
+@import './sections/_call-to-action-8.scss';
+@import './sections/_faq-8.scss';
+@import './sections/_cards-6.scss';
+@import './sections/_cards-7.scss';
+@import './sections/_hero-20.scss';
+@import './sections/_about-11.scss';
+@import './sections/_features-12.scss';
+@import './sections/_call-to-action-9.scss';
+@import './sections/_gallery-11.scss';
+@import './sections/_call-to-action-10.scss';
+@import './sections/_faq-9.scss';
+@import './sections/_cards-8.scss';
+@import './sections/_cards-9.scss';
+@import './sections/_hero-21.scss';
+@import './sections/_about-12.scss';
+@import './sections/_call-to-action-11.scss';
+@import './sections/_features-13.scss';
+@import './sections/_gallery-13.scss';
+@import './sections/_call-to-action-12.scss';
+@import './sections/_faq-10.scss';
+@import './sections/_call-to-action-14.scss';
+@import './sections/_cards-10.scss';
+@import './sections/_cards-11.scss';
+@import './sections/_hero-24.scss';
+@import './sections/_about-13.scss';
+@import './sections/_call-to-action-13.scss';
+@import './sections/_features-14.scss';
+@import './sections/_gallery-14.scss';
+@import './sections/_call-to-action-15.scss';
+@import './sections/_faq-11.scss';
+@import './sections/_call-to-action-16.scss';
+@import './sections/_cards-12.scss';
+@import './sections/_cards-13.scss';
+@import './sections/_destinations.scss';
+@import './sections/_speaker-details.scss';
+@import './sections/_about-15.scss';
+@import './sections/_call-to-action-17.scss';
+@import './sections/_post-details-3.scss';
+@import './sections/_posts-section.scss';
+@import './sections/_post-details-2.scss';
+@import './sections/_post-slider-2.scss';
+@import './sections/_cards-16.scss';
+@import './sections/_cards-15.scss';
+@import './sections/_post-details-4.scss';
+@import './sections/_posts-section-2.scss';
+@import './sections/_post-details-5.scss';
+@import './sections/_posts-section-3.scss';
+@import './sections/_hero.scss';
+@import './sections/_products-list.scss';
+@import './sections/_product-details.scss';
+@import './sections/_promo-cards.scss';
+@import './sections/_hero-23.scss';
+@import './sections/_about-14.scss';
+@import './sections/_clients-4.scss';
+@import './sections/_features-15.scss';
+@import './sections/_features-16.scss';
+@import './sections/_call-to-action-18.scss';
+@import './sections/_services-4.scss';
+@import './sections/_gallery-16.scss';
+@import './sections/_testimonials-4.scss';
+@import './sections/_faq-12.scss';
+@import './sections/_cards-17.scss';
+@import './sections/_destination-details.scss';
+@import './sections/_event-details.scss';
+@import './sections/_promo-cards-2.scss';
+@import './sections/_services-5.scss';

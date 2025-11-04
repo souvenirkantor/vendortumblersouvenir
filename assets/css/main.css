@@ -30030,7 +30030,7 @@ section,
   gap: 1.2rem;
   padding: 1.6rem;
   margin-top: 2.5rem;
-  border-radius: 6px;
+  border-radius: 10px;
   background: var(--accent-color);
   position: relative;
   overflow: hidden;
@@ -30052,11 +30052,9 @@ section,
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(0,0,0,0.12) 0%,
-    rgba(0,0,0,0.0) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(0, 0, 0, 0.12) 0%,
+      rgba(0, 0, 0, 0.0) 100%);
   pointer-events: none;
 }
 
@@ -30083,22 +30081,53 @@ section,
 
 .author-info {
   flex: 1;
-  color: white!important;
+  color: white !important;
 }
 
 .author-name {
   margin: 0;
   font-size: 1.3rem;
   font-weight: 600;
-  color: white!important;
+  color: white !important;
 }
 
 .author-desc {
   margin-top: 0.4rem;
-  color: white!important;
-  font-size: 14px!important;
+  color: white !important;
+  font-size: 14px !important;
   line-height: 1.5;
 }
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .author-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .author-image {
+    width: 80px;
+    height: 80px;
+    border-width: 2px;
+  }
+
+  .author-info {
+    flex: unset;
+  }
+
+  .author-name {
+    font-size: 1.1rem;
+  }
+
+  .author-desc {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+}
+
 
 /* ARTIKEL TERKAIT */
 .related-articles {

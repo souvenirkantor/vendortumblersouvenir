@@ -21164,10 +21164,27 @@ section,
 /*--------------------------------------------------------------
 # Speaker Details Section
 --------------------------------------------------------------*/
+.speaker-details .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.speaker-details .col-md-6 {
+  display: flex;
+  flex-direction: column;
+}
+
+.speaker-details .col-md-6 img {
+  width: 100%;
+  flex: 1 1 auto;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
 .speaker-details .details h2 {
   font-size: 28px;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .speaker-details .details .social {
@@ -21200,7 +21217,7 @@ section,
 
 .speaker-details .details p {
   color: color-mix(in srgb, var(--default-color), transparent 30%);
-  font-size: 15px;
+  font-size: 16px;
   margin-bottom: 10px;
 }
 
@@ -21300,7 +21317,10 @@ section,
 }
 
 .about-15 .image img {
-  transition: all 0.5s ease;
+  width: 100%;
+  max-height: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .about-15 .image img:hover {
@@ -21366,13 +21386,14 @@ section,
   border-radius: 5px;
   transition: 0.5s;
   margin: 10px;
-  border: 2px solid var(--default-color);
-  color: var(--default-color);
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  border: 2px solid var(--accent-color);
 }
 
 .call-to-action-17 .cta-btn:hover {
-  background: var(--accent-color);
-  color: var(--contrast-color);
+  background: var(--contrast-color);
+  color: var(--accent-color);
   border: 2px solid var(--accent-color);
 }
 

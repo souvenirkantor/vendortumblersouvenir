@@ -29912,6 +29912,7 @@ section,
   background: rgba(112, 126, 133, 0.05);
   border-left: 4px solid var(--accent-color);
   font-family: sans-serif;
+  margin-bottom: 0px!important;
   transition: all 0.3s ease;
 }
 

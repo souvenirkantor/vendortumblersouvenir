@@ -19,7 +19,8 @@
   <meta property="og:title" content="Vendor Tumbler Souvenir" />
   <meta property="og:description"
     content="Souvenir Kantor Eksklusif, Corporate Gift Premium, Agenda Kulit, Pena Metal, Power Bank, Plakat Kristal, Card Holder Kulit, Bluetooth Speaker, Cangkir Kopi Premium, Payung Golf, Flashdisk OTG, Desk Organizer, Voucher Belanja, Personal Branding, Hadiah Klien, Merchandise Fungsional" />
-  <meta property="og:image" content="https://tumblersouvenir.com/assets/img/product/Ide Souvenir Kantor Eksklusif untuk Branding Perusahaan.webp" />
+  <meta property="og:image"
+    content="https://tumblersouvenir.com/assets/img/product/Ide Souvenir Kantor Eksklusif untuk Branding Perusahaan.webp" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
@@ -511,8 +512,7 @@
                   </div>
                 </a>
                 <!-- 2 -->
-                <a class="mini-post" href="isi-seminar-kit-wajib-agar-acara-lebih-profesional.html"
-                  target="_blank">
+                <a class="mini-post" href="isi-seminar-kit-wajib-agar-acara-lebih-profesional.html" target="_blank">
                   <img src="assets/img/product/Isi Seminar Kit Wajib yang Profesional 03.webp"
                     alt="Contoh merchandise apresiasi karyawan berupa tumbler, tote bag, dan planner custom berlogo perusahaan">
                   <div>
@@ -719,10 +719,24 @@
       const tocList = document.getElementById("toc-list");
       const toggleBtn = document.getElementById("toc-toggle");
       if (!toc || !tocList || !toggleBtn) return;
+
       const headings = document.querySelectorAll(
         "article.post-card .post-content h2, article.post-card .post-content h3"
       );
-      headings.forEach((heading) => {
+
+      headings.forEach((heading, index) => {
+        // Kalau belum ada id, bikin otomatis dari teksnya
+        if (!heading.id) {
+          heading.id = heading.textContent
+            .toLowerCase()
+            .trim()
+            .replace(/[^\w\s-]/g, "") // hapus karakter aneh
+            .replace(/\s+/g, "-")     // spasi jadi tanda hubung
+            .substring(0, 60);        // biar ga kepanjangan
+          // kalau hasilnya kosong, fallback ke heading-n+index
+          if (!heading.id) heading.id = `heading-${index}`;
+        }
+
         const li = document.createElement("li");
         li.className = heading.tagName === "H3" ? "toc-h3" : "";
         const a = document.createElement("a");
@@ -731,11 +745,13 @@
         li.appendChild(a);
         tocList.appendChild(li);
       });
+
       toggleBtn.addEventListener("click", () => {
         toc.classList.toggle("collapsed");
       });
     });
   </script>
+
 
 </body>
 

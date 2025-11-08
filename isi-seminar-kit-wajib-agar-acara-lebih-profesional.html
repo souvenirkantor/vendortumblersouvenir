@@ -687,10 +687,24 @@
       const tocList = document.getElementById("toc-list");
       const toggleBtn = document.getElementById("toc-toggle");
       if (!toc || !tocList || !toggleBtn) return;
+
       const headings = document.querySelectorAll(
         "article.post-card .post-content h2, article.post-card .post-content h3"
       );
-      headings.forEach((heading) => {
+
+      headings.forEach((heading, index) => {
+        // Kalau belum ada id, bikin otomatis dari teksnya
+        if (!heading.id) {
+          heading.id = heading.textContent
+            .toLowerCase()
+            .trim()
+            .replace(/[^\w\s-]/g, "") // hapus karakter aneh
+            .replace(/\s+/g, "-")     // spasi jadi tanda hubung
+            .substring(0, 60);        // biar ga kepanjangan
+          // kalau hasilnya kosong, fallback ke heading-n+index
+          if (!heading.id) heading.id = `heading-${index}`;
+        }
+
         const li = document.createElement("li");
         li.className = heading.tagName === "H3" ? "toc-h3" : "";
         const a = document.createElement("a");
@@ -699,6 +713,7 @@
         li.appendChild(a);
         tocList.appendChild(li);
       });
+
       toggleBtn.addEventListener("click", () => {
         toc.classList.toggle("collapsed");
       });
